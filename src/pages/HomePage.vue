@@ -1,14 +1,11 @@
 <script setup>
   import { ref } from 'vue'
-  import Header from './Header.vue'
-  import Footer from './Footer.vue'
-  import PostCard from './PostCard.vue'
-  import Author from './Author.vue'
+  import Footer from '../components/Footer.vue'
+  import PostCard from '../components/PostCard.vue'
+  import Author from '../components/Author.vue'
 </script>
 
 <template>
-  <Header></Header>
-
   <section class="bg-[#f3f8f7] px-36 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="col-span-1 md:col-span-2">
       <h3 class="text-2xl font-medium mb-10"><span class="bg-[#2faaa1] text-white"> Featured </span> This Month</h3>

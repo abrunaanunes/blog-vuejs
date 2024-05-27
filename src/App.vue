@@ -1,22 +1,15 @@
 <script setup>
-import Home from './components/Home.vue'
 </script>
 
 <template>
-  <Home/>
-</template>
+  <header class="w-full px-36 py-6 flex flex-row justify-between">
+    <RouterLink to="/"><h1 class="font-medium"><span class="bg-[#2faaa1] text-white">Blog</span>book</h1></RouterLink>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+    <nav class="flex flex-row gap-6 items-center list-none">
+        <RouterLink to="/about">Conheça a TechBook</RouterLink>
+    </nav>
+  </header>
+  <main>
+    <RouterView />
+  </main>
+</template>
