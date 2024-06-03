@@ -3,84 +3,54 @@
   import Footer from '../components/Footer.vue'
   import PostCard from '../components/PostCard.vue'
   import Author from '../components/Author.vue'
+  import Statistic from '../components/Statistic.vue'
+  import { posts } from '../../database/database.js'
 </script>
 
 <template>
   <section class="bg-[#f3f8f7] px-36 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="col-span-1 md:col-span-2">
-      <h3 class="text-2xl font-medium mb-10"><span class="bg-[#2faaa1] text-white"> Featured </span> This Month</h3>
+      <h3><span class="bg-[#034c46] text-white"> Novidades </span> do Mês</h3>
       <div class="grid grid-cols-1 gap-8">
-        <PostCard></PostCard>
-        <PostCard></PostCard>
+        <PostCard v-for="post in posts.filter((item) => (item.is_featured)).slice(0,2)" :key="post.id" :postCard="post"></PostCard>
       </div>
     </div>
 
     <div class="col-span-1">
-      <h3><span class="bg-[#2faaa1] text-white"> Popular </span> Posted</h3>
+      <h3><span class="bg-[#034c46] text-white"> Populares </span> da Semana</h3>
       <div class="grid grid-cols-1 gap-8">
-        <PostCard :small="true"></PostCard>
-        <PostCard :small="true"></PostCard>
-        <PostCard :small="true"></PostCard>
+        <PostCard v-for="post in posts.slice(4,6)" :key="post.id" :small="true" :postCard="post"></PostCard>
       </div>
     </div>
   </section>
 
   <section class="px-36 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="col-span-1 md:col-span-2">
-      <h3><span class="bg-[#2faaa1] text-white"> Featured </span> This Month</h3>
+      <h3><span class="bg-[#034c46] text-white"> Novidades </span> do Mês</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <PostCard :column="true"></PostCard>
-        <PostCard :column="true"></PostCard>
-        <PostCard :column="true"></PostCard>
-        <PostCard :column="true"></PostCard>
+        <PostCard v-for="post in posts.slice(8,14)" :key="post.id" :column="true" :postCard="post"></PostCard>
       </div>
     </div>
 
     <!-- Top Authors -->
     <div class="col-span-1 flex flex-col gap-24">
       <div>
-        <h3><span class="bg-[#2faaa1] text-white"> Top </span> Authors</h3>
+        <h3><span class="bg-[#034c46] text-white"> Top </span> Authors</h3>
         <div class="grid grid-cols-1 gap-8">
-          <Author></Author>
-          <Author></Author>
-          <Author></Author>
+          <Author v-for="author in posts.reduce((acc, post) => acc.concat(post.author), []).slice(0,4)" :author="author"></Author>
         </div>
       </div>
 
       <!-- Categories -->
       <div>
-        <h3><span class="bg-[#2faaa1] text-white">Categories</span></h3>
+        <h3><span class="bg-[#034c46] text-white">Categorias</span></h3>
         <ul class="list-none divide-opacity-55 divide-y">
-          <li class="flex flex-row justify-between text-lg text-[#1C1C1C] py-2">Lifestyle <span>09</span></li>
-          <li class="flex flex-row justify-between text-lg text-[#1C1C1C] py-2">Lifestyle <span>09</span></li>
-          <li class="flex flex-row justify-between text-lg text-[#1C1C1C] py-2">Lifestyle <span>09</span></li>
-          <li class="flex flex-row justify-between text-lg text-[#1C1C1C] py-2">Lifestyle <span>09</span></li>
-          <li class="flex flex-row justify-between text-lg text-[#1C1C1C] py-2">Lifestyle <span>09</span></li>
+          <li v-for="category in posts.reduce((categories, post) => categories.concat(post.category), []).slice(0,4)" class="flex flex-row justify-between text-lg text-[#1C1C1C] py-2">{{category.name}} <span>09</span></li>
         </ul>
       </div>
 
       <!-- Today's update -->
-      <div>
-        <h3><span class="bg-[#2faaa1] text-white"> Today's </span> Update</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-[#f3f8f7] rounded-md p-8 flex flex-col justify-center items-center gap-2">
-            <p class="text-4xl font-medium text-[#2faaa1]">14</p>
-            <p>New Posts</p>
-          </div>
-          <div class="bg-[#f3f8f7] rounded-md p-8 flex flex-col justify-center items-center gap-2">
-            <p class="text-4xl font-medium text-[#2faaa1]">14</p>
-            <p>New Posts</p>
-          </div>
-          <div class="bg-[#f3f8f7] rounded-md p-8 flex flex-col justify-center items-center gap-2">
-            <p class="text-4xl font-medium text-[#2faaa1]">14</p>
-            <p>New Posts</p>
-          </div>
-          <div class="bg-[#f3f8f7] rounded-md p-8 flex flex-col justify-center items-center gap-2">
-            <p class="text-4xl font-medium text-[#2faaa1]">14</p>
-            <p>New Posts</p>
-          </div>
-        </div>
-      </div>
+      <Statistic></Statistic>
 
     </div>
   </section>

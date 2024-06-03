@@ -1,12 +1,17 @@
 <script setup>
-
+    const props = defineProps({
+        author: {
+            type: Object,
+            required: true
+        }
+    })
 </script>
 
 <template>
     <div class="flex flex-row items-center gap-4">
         <div class="w-24 h-20 rounded-full bg-gray-400"></div>
         <div class="w-full">
-            <h4>Jenny Kia</h4>
+            <h4>{{ author.name }}</h4>
             <p class="text-sm text-[#666666]">Fashion designer, Blogger, activist</p>
             <div class="flex flex-row gap-1 mt-2">
                 <span class="w-4 h-4 flex flex-row justify-center items-center border border-[#999999] rounded-md">

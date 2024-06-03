@@ -10,7 +10,7 @@
     @apply text-xl;
   }
   h3 {
-    @apply text-2xl font-medium mb-10
+    @apply text-2xl font-medium mb-4
   }
   h4 {
     @apply text-lg  font-medium mb-2
