@@ -38,7 +38,7 @@
       <div>
         <h3><span class="bg-[#034c46] text-white"> Top </span> Authors</h3>
         <div class="grid grid-cols-1 gap-8">
-          <Author v-for="author in posts.reduce((acc, post) => acc.concat(post.author), []).slice(0,4)" :author="author"></Author>
+          <Author v-for="author in authors" :key="author.id" :author="author"></Author>
         </div>
       </div>
 

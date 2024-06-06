@@ -17,7 +17,7 @@
 </script>
 
 <template>
-    <div class="w-full bg-white grid grid-cols-3 gap-6 p-4 rounded-md cursor-pointer" :class="{'grid !grid-cols-1 !p-4 border border-gray-200': column}" @click="$router.push({path: '/post/' + postCard?.slug})">
+    <div class="w-full bg-white grid grid-cols-3 gap-6 p-4 rounded-md cursor-pointer dark:bg-[#161B22]" :class="{'grid !grid-cols-1 !p-5 !pr-0 border border-gray-200 dark:border-gray-600': column}" @click="$router.push({path: '/post/' + postCard?.slug})">
         <img v-if="!!postCard?.cover_image" :src="postCard.cover_image" class="col-span-1 rounded-md w-full h-full object-cover" :class="{'!h-64': column}"/>
         <div v-else class="col-span-1 bg-gray-200 rounded-md w-full h-full" :class="{'!h-64': column}"></div>
         <div class="col-span-2 flex flex-col gap-4 justify-between" :class="{'!gap-2': small}">
