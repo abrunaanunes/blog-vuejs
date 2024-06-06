@@ -4,6 +4,7 @@
     import Author from '../components/Author.vue'
     import BreadCrumb from '../components/BreadCrumb.vue'
     import { posts } from '../../database/database.js'
+    import Category from '../components/Category.vue'
 
     const props = defineProps({
     slug: {
@@ -32,6 +33,10 @@
 
        </div>
         <div>{{ post?.content }}</div>
+      </div>
+
+      <div class="col-span-1">
+        <Category></Category>
       </div>
     </div>
   </section>

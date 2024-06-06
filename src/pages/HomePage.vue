@@ -4,7 +4,8 @@
   import PostCard from '../components/PostCard.vue'
   import Author from '../components/Author.vue'
   import Statistic from '../components/Statistic.vue'
-  import { posts } from '../../database/database.js'
+  import Category from '../components/Category.vue'
+  import { posts, authors } from '../../database/database.js'
 </script>
 
 <template>
@@ -43,10 +44,7 @@
 
       <!-- Categories -->
       <div>
-        <h3><span class="bg-[#034c46] text-white">Categorias</span></h3>
-        <ul class="list-none divide-opacity-55 divide-y">
-          <li v-for="category in posts.reduce((categories, post) => categories.concat(post.category), []).slice(0,4)" class="flex flex-row justify-between text-lg text-[#1C1C1C] py-2">{{category.name}} <span>09</span></li>
-        </ul>
+        <Category></Category>
       </div>
 
       <!-- Today's update -->
