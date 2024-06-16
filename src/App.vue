@@ -19,20 +19,20 @@
 
 
 <template>
-  <div class="bg-[#034c46] py-2 px-36 flex flex-row items-center justify-end gap-6">
+  <div class="bg-[#034c46] px-6 md:px-36 py-2 flex flex-row items-center justify-end gap-6">
     <a href="mailto:contato@blogbook.com.br" class="text-white text-sm uppercase text-right cursor-pointer hover:opacity-45 flex flex-row gap-2 items-center">
       <fa-icon icon="envelope" class="text-md text-white"></fa-icon>
-      contato@blogbook.com.br
+      <p class="hidden md:block">contato@blogbook.com.br</p>
     </a>
     <RouterLink to="/map" class="text-white text-sm uppercase text-right flex flex-row gap-2 items-center">
       <fa-icon icon="map" class="text-md text-white"></fa-icon>
-      Mapa do site
+      <p class="hidden md:block">Mapa do site</p>
     </RouterLink>
   </div>
-  <header class="w-full px-36 py-6 flex flex-row justify-between border-b border-gray-100 shadow-sm dark:border-none dark:bg-[#161B22] dark:text-gray-400">
+  <header class="w-full px-6 md:px-36 py-6 flex flex-row justify-between border-b border-gray-100 shadow-sm dark:border-none dark:bg-[#161B22] dark:text-gray-400">
     <RouterLink to="/"><h1 class="font-medium"><span class="bg-[#034c46] text-white">Blog</span>book</h1></RouterLink>
 
-    <form class="flex flex-items justify-center items-center" @submit.prevent="submit">
+    <form class="hidden md:flex flex-items justify-center items-center" @submit.prevent="submit">
       <input class="border border-gray-200 p-2 dakr:bg-[#0D1117]" type="text" placeholder="Pesquisar por artigos..." v-model="form.query">
       <button class="bg-[#034c46] text-white h-full p-2 uppercase font-medium" type="submit">Buscar</button>
     </form>

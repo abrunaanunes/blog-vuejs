@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <footer class="w-full bg-[#f3f8f7] px-36 py-24 mt-12 grid grid-cols-1 md:grid-cols-6 gap-24 dark:mt-0 dark:border-t dark:border-gray-600">
+    <footer class="w-full bg-[#f3f8f7] px-6 md:px-36 py-12 md:py-24 mt-12 grid grid-cols-1 md:grid-cols-6 gap-6 md:gap-24 dark:mt-0 dark:border-t dark:border-gray-600">
         <div class="col-span-2">
             <h1 class="font-medium mb-6"><span class="bg-[#034c46] text-white">Blog</span>book</h1>
 
