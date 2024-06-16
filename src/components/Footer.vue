@@ -9,7 +9,7 @@
 
             <p class="text-[#555555] flex flex-col gap-2 list-none">Fique por dentro das novidades da área de programação e tecnologia.</p>
         </div>
-        <div class="col-span-2">
+        <div class="col-span-1">
             <p class="text-lg text-[#222222] dark:text-gray-600 font-medium mb-6">Categorias</p>
 
             <ul class="text-[#555555] flex flex-col gap-2 list-none">
@@ -25,6 +25,16 @@
                 <li class="whitespace-nowrap"><RouterLink to="/faq">FAQ</RouterLink></li>
                 <li class="whitespace-nowrap"><RouterLink to="/suport">Suporte</RouterLink></li>
                 <li class="whitespace-nowrap"><RouterLink to="/contact">Entre em contato</RouterLink></li>
+            </ul>
+        </div>
+
+        <div class="col-span-2">
+            <p class="text-lg text-[#222222] dark:text-gray-600 font-medium mb-6 whitespace-nowrap">Contato</p>
+
+            <ul class="text-[#555555] flex flex-col gap-2 list-none">
+                <li> Rua Valério Ronchi, 701, Uvaranas, Ponta Grossa</li>
+                <li> (12) 99651-7859</li>
+                <li> brunanunes@alunos.utfpr.edu.com.br</li>
             </ul>
         </div>
     </footer>
