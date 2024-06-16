@@ -9,8 +9,8 @@
 </script>
 
 <template>
-  <section class="bg-[#f3f8f7] px-12 md:px-36 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="col-span-1 md:col-span-2">
+  <section class="bg-[#f3f8f7] px-6 lg:px-36 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="col-span-1 lg:col-span-2">
       <h2><span class="bg-[#034c46] text-white"> Novidades </span> do Mês</h2>
       <div class="grid grid-cols-1 gap-8">
         <PostCard v-for="post in posts.filter((item) => (item.is_featured)).slice(0,2)" :key="post.id" :postCard="post"></PostCard>
@@ -25,7 +25,7 @@
     </div>
   </section>
 
-  <section class="px-12 md:px-36 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+  <section class="px-6 lg:px-36 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="col-span-1 md:col-span-2">
       <h2><span class="bg-[#034c46] text-white"> Novidades </span> do Mês</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

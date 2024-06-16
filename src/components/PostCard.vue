@@ -23,12 +23,14 @@
         <div class="col-span-2 flex flex-col gap-4 justify-between" :class="{'!gap-2': small}">
             <span class="w-fit bg-[#dff1f0] text-sm text-[#222222] px-2 py-1 rounded-sm">{{postCard?.category?.name ?? 'News'}}</span>
             <h1 :class="{'!text-lg !leading-6 !mb-1': small}">{{postCard?.title}}</h1>
-            <div class="w-fit hidden md:flex md:flex-row text-md text-[#777777] md:divide-x-2 md:divide-gray-200 gap-2" :class="{'hidden': small}">
-                <span>{{ postCard?.author?.name }}</span>
-                <span>02 december 2022</span>
-                <span :class="{'hidden': column}">3 min. to read</span>
-            </div>
             <p class="text-base lg:text-lg text-[#555555]" :class="{'hidden': small}">{{ postCard?.description }}</p>
+            <div class="w-full hidden md:flex md:flex-row justify-between text-xs text-[#777777] gap-2" :class="{'hidden': small}">
+                <span>{{ postCard?.author?.name }}</span>
+                <div class="flex flex-row gap-2">
+                    <span>2 Jun</span>
+                    <span :class="{'hidden': column}">| 3 min. to read</span>
+                </div>
+            </div>
         </div>
     </div>
 </template>
