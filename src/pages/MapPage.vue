@@ -53,7 +53,7 @@
 </script>
 
 <template>
-  <section class="px-36 py-12">
+  <section class="px-6 lg:px-36  py-12">
     <BreadCrumb class="mb-8" :pages="[{link: '/map', title: 'Mapa do site'}]"></BreadCrumb>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

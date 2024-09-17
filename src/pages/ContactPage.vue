@@ -55,7 +55,7 @@
 </script>
 
 <template>
-  <section class="px-36 py-12">
+  <section class="px-6 lg:px-36 py-12">
     <BreadCrumb class="mb-8" :pages="[{link: '/contact', title: 'Entre em contato'}]"></BreadCrumb>
     <h3><span class="bg-[#034c46] text-white">Entre </span> em Contato</h3>
   </section>

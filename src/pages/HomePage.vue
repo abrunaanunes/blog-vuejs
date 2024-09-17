@@ -9,25 +9,25 @@
 </script>
 
 <template>
-  <section class="bg-[#f3f8f7] px-36 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="col-span-1 md:col-span-2">
-      <h3><span class="bg-[#034c46] text-white"> Novidades </span> do Mês</h3>
+  <section class="bg-[#f3f8f7] px-6 lg:px-36 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="col-span-1 lg:col-span-2">
+      <h2><span class="bg-[#034c46] text-white"> Novidades </span> do Mês</h2>
       <div class="grid grid-cols-1 gap-8">
         <PostCard v-for="post in posts.filter((item) => (item.is_featured)).slice(0,2)" :key="post.id" :postCard="post"></PostCard>
       </div>
     </div>
 
     <div class="col-span-1">
-      <h3><span class="bg-[#034c46] text-white"> Populares </span> da Semana</h3>
+      <h2><span class="bg-[#034c46] text-white"> Populares </span> da Semana</h2>
       <div class="grid grid-cols-1 gap-8">
         <PostCard v-for="post in posts.slice(4,6)" :key="post.id" :small="true" :postCard="post"></PostCard>
       </div>
     </div>
   </section>
 
-  <section class="px-36 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+  <section class="px-6 lg:px-36 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="col-span-1 md:col-span-2">
-      <h3><span class="bg-[#034c46] text-white"> Novidades </span> do Mês</h3>
+      <h2><span class="bg-[#034c46] text-white"> Novidades </span> do Mês</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <PostCard v-for="post in posts.slice(8,14)" :key="post.id" :column="true" :postCard="post"></PostCard>
       </div>
@@ -36,7 +36,7 @@
     <!-- Top Authors -->
     <div class="col-span-1 flex flex-col gap-24">
       <div>
-        <h3><span class="bg-[#034c46] text-white"> Top </span> Authors</h3>
+        <h2><span class="bg-[#034c46] text-white"> Top </span> Authors</h2>
         <div class="grid grid-cols-1 gap-8">
           <Author v-for="author in authors" :key="author.id" :author="author"></Author>
         </div>

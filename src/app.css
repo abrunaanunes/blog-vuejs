@@ -4,16 +4,16 @@
 
 @layer base {
   h1 {
-    @apply dark:text-gray-300 text-4xl;
+    @apply text-gray-900 dark:text-gray-300 text-2xl lg:text-4xl mb-4;
   }
   h2 {
-    @apply dark:text-gray-300 text-xl;
+    @apply text-gray-900 dark:text-gray-300 text-xl lg:text-2xl mb-4;
   }
   h3 {
-    @apply dark:text-gray-300 text-2xl font-medium mb-4
+    @apply text-gray-900 dark:text-gray-300 text-lg lg:text-xl font-medium mb-4
   }
   h4 {
-    @apply dark:text-gray-300 text-lg  font-medium mb-2
+    @apply text-gray-900 dark:text-gray-300 text-base lg:text-lg font-medium mb-4
   }
   a {
     @apply cursor-pointer hover:opacity-45;
